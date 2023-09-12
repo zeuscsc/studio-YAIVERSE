@@ -10,9 +10,9 @@
 # Global config
 GLOBAL:
   outdir: 'results/car_police_example'                    # directory path to save ckpt & results
-  resume_pretrain: '../pretrained_model/shapenet_car.pt' # path to pretrained GET3D model
+  resume_pretrain: 'GET3D/pretrained_model/shapenet_car.pt' # path to pretrained GET3D model
   batch: 3                     # same as # of samples
-  gpus: 2                      # num of gpu
+  gpus: 1                      # num of gpu
 
   sample_1st: 500
   sample_2nd: -1
