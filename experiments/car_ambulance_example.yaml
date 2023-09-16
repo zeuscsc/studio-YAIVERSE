@@ -9,7 +9,7 @@
 
 # Global config
 GLOBAL:
-  outdir: 'results/car_sketch_example'                    # directory path to save ckpt & results
+  outdir: 'results/car_ambulance_example'                    # directory path to save ckpt & results
   resume_pretrain: 'GET3D/pretrained_model/shapenet_car.pt' # path to pretrained GET3D model
   batch: 3                     # same as # of samples
   gpus: 1                      # num of gpu
@@ -42,7 +42,7 @@ GET3D:
   mlp_latent_channel: 32        # mlp_latent_channel for XYZPlaneTex network
   deformation_multiplier: 1     # Multiplier for the predicted deformation
   tri_plane_resolution: 256     # The resolution for tri plane
-  n_views: 9                   # GET3D setting : ! DO NOT FIX !
+  n_views: 12                  # GET3D setting : ! DO NOT FIX !
   use_tri_plane: True           # Whether use tri plane representation
   tet_res: 90                   # Resolution for teteahedron
   latent_dim: 512               # Dimension for latent code
@@ -74,10 +74,10 @@ NADA:
 
   # (3) settings - text / layer-freezing
   source_text: 'car'              
-  target_text: 'sketch'               
+  target_text: 'ambulance'               
 
   auto_layer_iters: 1
-  auto_layer_k: 30
+  auto_layer_k: 20
   auto_layer_batch: 12
 
   gradient_clip_threshold: -1

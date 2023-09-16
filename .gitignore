@@ -56,3 +56,7 @@ ehthumbs_vista.db
 $RECYCLE.BIN/
 *.lnk
 GET3D
+
+*.zip
+*.z01
+*.z02

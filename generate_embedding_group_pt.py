@@ -18,7 +18,7 @@ Script Description
         >>> embedding_group['car'][0] == car_embedding  # True
         >>> embedding_group['car'][1]['rusty car'] == rustycar_embedding  # True
 Usage
-    - $ python generate_embedding_group_pt.py --checkpoint_root ./weights/get3d_nada --output_path ./weights/clip_map/checkpoint_group.pt
+    - $ python generate_embedding_group_pt.py --checkpoint_root ./results --output_path ./weights/clip_map/checkpoint_group.pt
 Author
     - Jisoo Kim
 """
@@ -37,6 +37,7 @@ def main(args):
         embedding_group = torch.load(output_path)
     args.checkpoint_root = os.path.abspath(os.path.expanduser(args.checkpoint_root))
     for folder in os.listdir(args.checkpoint_root):
+        print(folder)
         with open(
                 glob.glob(os.path.join(args.checkpoint_root, folder, '*.yaml'))[0],
                 encoding='UTF-8'

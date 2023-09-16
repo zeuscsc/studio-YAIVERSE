@@ -43,7 +43,7 @@ class Engine(object):
         elif isinstance(engine_like, dict):  # config dict
             return cls(engine_like)
         elif isinstance(engine_like, str) or hasattr(engine_like, '__fspath__'):  # path
-            with open(engine_like, 'r') as fp:
+            with open(engine_like, 'r',encoding="utf-8") as fp:
                 return cls(yaml.safe_load(fp))
         elif hasattr(engine_like, 'read'):  # file-like
             return cls(yaml.safe_load(engine_like))
